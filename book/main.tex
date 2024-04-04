@@ -1,0 +1,115 @@
+\usepackage{lipsum}
+
+\usepackage{amsmath,amssymb,graphicx,hyperref,tcolorbox}
+\usepackage{braket}
+
+\usepackage{tikz}
+\usetikzlibrary{patterns} % Add this line to your preamble
+\usetikzlibrary{decorations.pathmorphing} % Add this line to use the "snake" decoration
+\usetikzlibrary{positioning} % This library is used for relative positioning (e.g., "below=of ...")
+
+\DeclareMathOperator{\Tr}{Tr}
+
+\begin{document}
+
+% =======================================================================================
+%\cleardoublepage % Forces the first chapter to start on an odd page so it's on the right
+
+% =======================================================================================
+%                                   PREAMBLE
+% =======================================================================================
+\coverpage{\TITLE}{\SUBTITLE}{\AUTHOR}{\DATE}{\SUBJECT}
+%----------------------------------------------------------------------------------------
+\newpage
+\backgroundbarvisiblefalse
+\pagestyle{plain}
+\input{book/sections/preamble/context}
+\input{book/sections/preamble/changelog}
+\input{book/sections/preamble/contacts}
+\input{book/sections/preamble/credits}
+%----------------------------------------------------------------------------------------
+\newpage
+\tableofcontents
+
+% =======================================================================================
+%                                   PART I
+% =======================================================================================
+\part{Cosmos}
+%----------------------------------------------------------------------------------------
+\newpage
+\input{book/sections/part1/intro}
+\chapter{Undifferentiated Symmetric Morphological Space} \label{ch:UndifferentiatedSymmetricMorphologicalSpace}
+\input{book/sections/part1/UndifferentiatedSymmetricMorphologicalSpace}
+%----------------------------------------------------------------------------------------
+\newpage
+\chapter{Observation and Measurement-Induced Symmetry Breaking}\label{ch:ObservationandMeasurementInducedSymmetryBreaking}
+\input{book/sections/part1/ObservationandMeasurementInducedSymmetryBreaking}
+%----------------------------------------------------------------------------------------
+\newpage
+\chapter{Morphic Resonance and Structure Formation}\label{ch:MorphicResonanceandStructureFormation}
+\input{book/sections/part1/MorphicResonanceandStructureFormation}
+%----------------------------------------------------------------------------------------
+\newpage
+\chapter{Emergence of 3D Space}\label{ch:Emergenceof3DSpace}
+\input{book/sections/part1/Emergenceof3DSpace}
+%----------------------------------------------------------------------------------------
+\newpage
+\chapter{Emergent Field Theory}\label{ch:EmergentFieldTheory}
+\input{book/sections/part1/EmergentFieldTheory}
+%----------------------------------------------------------------------------------------
+\newpage
+\chapter{The Emergence of Gravity and Spacetime}\label{ch:TheEmergenceofGravityandSpacetime}
+\input{book/sections/part1/TheEmergenceofGravityandSpacetime}
+%----------------------------------------------------------------------------------------
+\newpage
+\chapter{Conclusion and Future Directions}\label{ch:ConclusionandFutureDirections}
+\input{book/sections/part1/ConclusionandFutureDirections}
+
+% =======================================================================================
+%                                   PART II
+% =======================================================================================
+%\part{Life}
+%----------------------------------------------------------------------------------------
+%\newpage
+%\chapter{Hendrerit sapien} \label{ch:hendrerit}
+%\input{sections/part2/dolor}
+%\newpage
+%\input{sections/part2/accumsan}
+
+% =======================================================================================
+%                                   APPENDICES
+% =======================================================================================
+%\part{Appendices}
+%----------------------------------------------------------------------------------------
+%\newpage
+%\chapter{Vestibulum commodo} \label{ch:commodo}
+%\input{sections/appendices/consectetur}
+%----------------------------------------------------------------------------------------
+%\newpage
+%\chapter{Etiam facilisis} \label{ch:etiam}
+%\input{sections/appendices/adipiscing}
+
+% =======================================================================================
+%                                   APPENDICES
+% =======================================================================================
+% \part{Appendices}
+% %----------------------------------------------------------------------------------------
+% \newpage
+% \chapter{Vestibulum commodo} \label{ch:commodo}
+% \input{book/sections/appendices/consectetur}
+% %----------------------------------------------------------------------------------------
+% \newpage
+% \chapter{Sollicitudin} \label{ch:sollicitudin}
+% \input{book/sections/appendices/sollicitudin}
+% %----------------------------------------------------------------------------------------
+% \newpage
+% \chapter{Etiam facilisis} \label{ch:etiam}
+% \input{book/sections/appendices/adipiscing}
+%----------------------------------------------------------------------------------------
+\newpage
+\listoffigures
+\listoftables
+%----------------------------------------------------------------------------------------
+% \newpage\printbibliography[title = {Aliquam}]
+
+\end{document}

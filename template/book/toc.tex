@@ -48,9 +48,15 @@
   \vskip 0pt
   \begingroup
     \parindent \z@ \rightskip \@pnumwidth
-    \leavevmode\colorbox{bgalt}{\vtop{\hsize=\dimexpr\textwidth\relax
-      \hspace*{4cm}\strut\color{fg}\bfseries\sffamily\uppercase{#1}
-      \nobreak\hfill\nobreak\hb@xt@\@pnumwidth{\hss #2}\strut}}\par
+    \leavevmode\colorbox{bgalt}{%
+      \vtop{%
+        \hsize=\dimexpr\textwidth\relax
+        \leavevmode\strut\color{fg}\bfseries\sffamily\uppercase{#1}%
+        \nobreak\hfill\nobreak\hb@xt@\@pnumwidth{\hss #2}\strut
+        \hangafter=1 % Apply hanging indent after the first line
+        \hangindent=4cm % Indent lines starting from the second line
+      }%
+    }\par
     \penalty\@highpenalty
   \endgroup
 \fi}
@@ -62,9 +68,13 @@
   \vskip 0em
   \begingroup
     \parindent \z@ \rightskip \@pnumwidth
-    \leavevmode\colorbox{bg}{\vtop{\hsize=\dimexpr\textwidth\relax
-      \hspace*{4cm}\strut\color{fg}\sffamily#1
-      \nobreak\hfill\nobreak\hb@xt@\@pnumwidth{\hss #2}\strut}}\par
+    \leavevmode\colorbox{bg}{%
+      \vtop{%
+        \hsize=\dimexpr\textwidth-\@pnumwidth-4em\relax % Increase right padding for sections
+        \hspace*{4cm}\strut\color{fg}\sffamily#1
+        \nobreak\hfill\nobreak\hb@xt@\@pnumwidth{\hss #2}\strut
+      }%
+    }\par
     \penalty\@highpenalty
   \endgroup
 \fi}

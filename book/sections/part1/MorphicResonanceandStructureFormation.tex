@@ -1,0 +1,83 @@
+
+\section{Definition and mathematical formulation}
+\subsection{Similarity function and spatial, temporal, and morphological-similarity falloff}
+The morphic resonance is a process that leads to the formation of structures and patterns in the USMS, based on the similarity and resonance between its states. The similarity between two states $\ket{\psi}$ and $\ket{\phi}$ is measured by a similarity function $S(\psi,\phi)$, which is a real-valued function that satisfies the properties of reflexivity, symmetry, and triangle inequality. The similarity function depends on the spatial, temporal, and morphological properties of the states, and it has a falloff behavior that decreases with the distance, duration, and complexity of the states.
+
+\begin{tcolorbox}[colback=blue!5!white,colframe=blue!75!black,title=New terms]
+\begin{description}
+\item[Morphic resonance:] A hypothesis proposed by Rupert Sheldrake, which states that the forms and patterns of self-organizing systems are influenced by the forms and patterns of similar systems in the past, through a process of resonance or similarity. Morphic resonance is a non-local and non-material process that operates across space and time, and it is responsible for the emergence of habits, instincts, and collective memories in living systems.
+\item[Similarity function:] A mathematical function that measures the degree of similarity or resemblance between two objects or patterns. The similarity function satisfies the axioms of a metric, such as non-negativity, identity of indiscernibles, symmetry, and triangle inequality, and it can be based on various criteria, such as the Euclidean distance, the correlation coefficient, or the mutual information between the objects.
+\end{description}
+\end{tcolorbox}
+
+\subsection{Resonance-induced clustering and structure formation}
+The morphic resonance leads to the clustering and aggregation of similar states, which form structures and patterns that are stable and self-reinforcing. The clustering process is driven by the resonance between the states, which leads to the alignment and synchronization of their phases and amplitudes. The resonance-induced clustering is a non-linear and self-organizing process that leads to the emergence of complex and hierarchical structures, which are not present in the individual states.
+
+\begin{tcolorbox}[colback=green!5!white,colframe=green!75!black,title=Question]
+How does the morphic resonance process differ from other models of structure formation, such as the Turing patterns or the reaction-diffusion systems?
+\tcblower
+The morphic resonance process differs from other models of structure formation in several key aspects:
+\begin{itemize}
+\item The morphic resonance is a non-local and non-material process that operates across space and time, whereas the Turing patterns and the reaction-diffusion systems are local and material processes that operate in a specific spatial domain and time scale.
+\item The morphic resonance is based on the similarity and resonance between the states, which can be spatially and temporally separated, whereas the Turing patterns and the reaction-diffusion systems are based on the local interactions and feedbacks between the components of the system.
+\item The morphic resonance leads to the emergence of complex and hierarchical structures that are influenced by the past forms and patterns of similar systems, whereas the Turing patterns and the reaction-diffusion systems lead to the emergence of regular and periodic patterns that are determined by the initial conditions and the boundary conditions of the system.
+\item The morphic resonance is a top-down process that guides the formation of structures from the global to the local scale, whereas the Turing patterns and the reaction-diffusion systems are bottom-up processes that generate the patterns from the local to the global scale.
+\end{itemize}
+Thus, the morphic resonance process provides a novel and complementary mechanism for the emergence of complex structures and patterns in nature, which cannot be fully explained by the conventional models of self-organization and pattern formation.
+\end{tcolorbox}
+
+\section{Properties and characteristics}
+\subsection{Self-organization and the emergence of complex patterns}
+The morphic resonance is a self-organizing process that leads to the emergence of complex patterns and structures, which are not imposed by external forces or constraints. The self-organization is driven by the internal dynamics and interactions of the states, which lead to the spontaneous formation of order and coherence. The emergent patterns and structures are characterized by a high degree of symmetry, regularity, and scalability, which reflect the underlying similarity and resonance between the states.
+
+
+\begin{figure}[h]
+\centering
+\begin{tikzpicture}[scale=0.8, every node/.style={scale=0.8}]
+\draw[thick, ->] (-5,0) -- (5,0) node[right] {Spatial/Temporal Distance};
+\draw[thick, ->] (0,-3) -- (0,3) node[above] {Similarity $S(\psi,\phi)$};
+
+\draw[domain=-4:4,smooth,variable=\x,blue] plot ({\x},{2.5*exp(-abs(\x)/2)});
+\node[color=blue] at (4,2) {$S(\psi,\phi) = e^{-|\psi-\phi|/\lambda}$};
+
+\foreach \i in {-4,-3,...,4}
+{
+  \pgfmathparse{rnd} % Generate a random number between 0 and 1.
+  \ifdim\pgfmathresult pt>0.5pt % Compare the generated number.
+    \draw[fill=red] (\i,{2.5*exp(-abs(\i)/2)}) circle (0.1); % If greater than 0.5
+  \else
+    \draw[fill=blue] (\i,{2.5*exp(-abs(\i)/2)}) circle (0.1); % If less or equal to 0.5
+  \fi
+}
+
+\draw[thick, <->, color=green!50!black] (-2,{2.5*exp(-abs(-2)/2)+0.5}) -- (2,{2.5*exp(-abs(2)/2)+0.5}) node[midway,above] {Resonance};
+z
+\draw[pattern=north east lines, pattern color=red!50] (-3,{2.5*exp(-abs(-3)/2)-0.5}) rectangle (-1,{2.5*exp(-abs(-1)/2)-0.5});
+\node at (-2,{2.5*exp(-abs(-2)/2)-0.8}) {Cluster};
+
+\draw[pattern=north east lines, pattern color=blue!50] (1,{2.5*exp(-abs(1)/2)-0.5}) rectangle (3,{2.5*exp(-abs(3)/2)-0.5});
+\node at (2,{2.5*exp(-abs(2)/2)-0.8}) {Cluster};
+
+\begin{scope}[xshift=7cm, yshift=1cm, node distance=1cm]
+\node[draw, rectangle, fill=red!20] (RedStates) {Red states};
+\node[draw, rectangle, fill=blue!20, below=of RedStates] (BlueStates) {Blue states};
+\node[draw, rectangle, fill=green!20, below=of BlueStates] (Resonance) {Resonance};
+\node[draw, rectangle, fill=orange!20, below=of Resonance] (Clusters) {Clusters};
+\draw[thick, ->] (RedStates) -- (Resonance);
+\draw[thick, ->] (BlueStates) -- (Resonance);
+\draw[thick, ->] (Resonance) -- (Clusters);
+\end{scope}
+\end{tikzpicture}
+\caption{Schematic representation of the morphic resonance process and the emergence of complex patterns. The similarity function $S(\psi,\phi)$ (blue curve) measures the degree of resemblance between the states $\ket{\psi}$ and $\ket{\phi}$, and it has an exponential falloff behavior that depends on the spatial, temporal, and morphological distance between the states (red and blue circles). The resonance between the similar states (green double arrow) leads to the clustering and aggregation of the states (red and blue hatched boxes), and the formation of complex and hierarchical structures that are stable and self-reinforcing. The legend on the right explains the relationship between the different types of states, the resonance effect, and the emergence of clusters.}
+\label{fig:morphic_resonance}
+\end{figure}
+
+\subsection{Scale-invariance and the fractal nature of emergent structures}
+The morphic resonance leads to the formation of scale-invariant and fractal structures, which have similar properties and patterns at different scales and resolutions. The scale-invariance is a consequence of the self-similarity and self-affinity of the states, which lead to the recursive and hierarchical organization of the structures. The fractal nature of the emergent structures is characterized by a non-integer dimension, which reflects the complexity and irregularity of the patterns.
+
+\begin{tcolorbox}[colback=blue!5!white,colframe=blue!75!black,title=New terms]
+\begin{description}
+\item[Scale-invariance:] A property of a system or a pattern that remains unchanged under a rescaling of the variables or the parameters of the system. Scale-invariant systems exhibit self-similarity and power-law behavior, and they are characterized by critical exponents that determine the scaling relations between the variables.
+\item[Fractal:] A geometric object or a pattern that exhibits self-similarity and scale-invariance, and that has a non-integer dimension. Fractals are characterized by their fractal dimension, which measures the degree of irregularity and complexity of the pattern, and by their lacunarity, which measures the degree of heterogeneity and gappiness of the pattern.
+\end{description}
+\end{tcolorbox}
